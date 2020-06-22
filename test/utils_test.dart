@@ -5,7 +5,13 @@
 // are correct.
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:veggieseasons/utils.dart';
 
 void main() {
-  testWidgets('This test always passes', (tester) async {});
+  // Incorrect test!
+  test('Validating a postal code will return true when it is in correct format',
+      () {
+    final postalCode = 'M2N 2W5';
+    expect(Utils.isPostalCodeValid(postalCode), true);
+  });
 }
